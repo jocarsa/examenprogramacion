@@ -38,7 +38,26 @@ def menu():
         print("Actualizamos un registro")
     elif opcion == "5":
         print("Eliminamos un registro")
+        criterio = input("Introduce la entrada a eliminar")
+        # abro el archivo original
+        archivo = open("datos.txt",'r')
+        contenidoinicio = archivo.readlines()
+        contenidofinal = []
+        # busco linea a linea
+        for fila in contenidoinicio:
+            if criterio.lower() in fila.lower():
+                pass # si un elemento coincide con la busqueda, no lo agrego
+            else:
+                contenidofinal.append(fila) #lo agrego
+        archivo.close()
+        # abro el archivo pero en modo w
+        archivo = open("datos.txt",'w')
+        #repaso el contenido final
+        for fila in contenidofinal:
+            archivo.write(fila) #escribo en el archivo
+        archivo.close() # cierro el archivo
     elif opcion == "6":
+        
         print("Salimos")
     menu()
 
