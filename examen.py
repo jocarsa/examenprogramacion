@@ -16,6 +16,13 @@ def menu():
         archivo.close()
     elif opcion == "2":
         print("Buscamos un registro")
+        criterio = input("Introduce tu criterio de busqueda")
+        archivo = open("datos.txt",'r')
+        contenido = archivo.readlines()
+        for fila in contenido:
+            if criterio in fila:
+                print(fila)
+        archivo.close()
     elif opcion == "3":
         print("Insertamos un registro")
         titulo = input("Introduce el titulo de la web:")
