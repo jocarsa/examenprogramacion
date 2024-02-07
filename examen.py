@@ -36,6 +36,30 @@ def menu():
         archivo.close()
     elif opcion == "4":
         print("Actualizamos un registro")
+        criterio = input("Introduce la entrada a actualizar")
+        titulo = input("Introduce el titulo de la web:")
+        descripcion = input("Introduce la descripción de la web:")
+        url = input("Introduce la url de la web:")
+        categoria = input("Introduce la categoría de la web:")
+        # abro el archivo original
+        archivo = open("datos.txt",'r')
+        contenidoinicio = archivo.readlines()
+        contenidofinal = []
+        # busco linea a linea
+        for fila in contenidoinicio:
+            if criterio.lower() in fila.lower():
+                s = ","
+                nl = "\n"
+                contenidofinal.append(titulo+s+descripcion+s+url+s+categoria+nl)
+            else:
+                contenidofinal.append(fila) #lo agrego
+        archivo.close()
+        # abro el archivo pero en modo w
+        archivo = open("datos.txt",'w')
+        #repaso el contenido final
+        for fila in contenidofinal:
+            archivo.write(fila) #escribo en el archivo
+        archivo.close() # cierro el archivo
     elif opcion == "5":
         print("Eliminamos un registro")
         criterio = input("Introduce la entrada a eliminar")

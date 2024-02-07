@@ -1,1 +1,2 @@
 Apple,Empresa de ordenadores,https://apple.com,Informática
+Mi Google,Es un motor,https://google.com,Motores de busqueda
