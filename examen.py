@@ -1,3 +1,5 @@
+import sys
+
 def menu():
     print("Elige una opción:")
     print("1.-Listado de registros")
@@ -81,8 +83,8 @@ def menu():
             archivo.write(fila) #escribo en el archivo
         archivo.close() # cierro el archivo
     elif opcion == "6":
-        
         print("Salimos")
+        sys.exit()
     menu()
 
 menu()
