@@ -1,0 +1,2 @@
+Google,Motor de busqueda,https://google.com,Buscadores
+Apple,Empresa de ordenadores,https://apple.com,Informática

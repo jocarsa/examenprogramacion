@@ -13,6 +13,15 @@ def menu():
         print("Buscamos un registro")
     elif opcion == "3":
         print("Insertamos un registro")
+        titulo = input("Introduce el titulo de la web:")
+        descripcion = input("Introduce la descripción de la web:")
+        url = input("Introduce la url de la web:")
+        categoria = input("Introduce la categoría de la web:")
+        s = ","
+        nl = "\n"
+        archivo = open("datos.txt",'a')
+        archivo.write(titulo+s+descripcion+s+url+s+categoria+nl)
+        archivo.close()
     elif opcion == "4":
         print("Actualizamos un registro")
     elif opcion == "5":
