@@ -9,6 +9,11 @@ def menu():
     opcion = input("Opción: ")
     if opcion == "1":
         print("Listamos los registros")
+        archivo = open("datos.txt",'r')
+        contenido = archivo.readlines()
+        for fila in contenido:
+            print(fila)
+        archivo.close()
     elif opcion == "2":
         print("Buscamos un registro")
     elif opcion == "3":
