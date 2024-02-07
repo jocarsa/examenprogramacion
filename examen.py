@@ -20,7 +20,7 @@ def menu():
         archivo = open("datos.txt",'r')
         contenido = archivo.readlines()
         for fila in contenido:
-            if criterio in fila:
+            if criterio.lower() in fila.lower():
                 print(fila)
         archivo.close()
     elif opcion == "3":
